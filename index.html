@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dream Cars | Carros premium e seminovos</title>
+  <meta name="description" content="Encontre o carro dos seus sonhos: catálogo selecionado, financiamento facilitado e avaliação gratuita do seu usado.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2316181c'/><text x='16' y='22' font-family='Arial' font-weight='700' font-size='15' fill='%23ffaa00' text-anchor='middle'>DC</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/hero.webp" imagesrcset="assets/img/hero-sm.webp 960w, assets/img/hero.webp 1659w" imagesizes="100vw">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/bundle/home.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header id="site-header" class="site-header"></header>
+
+  <main id="conteudo" tabindex="-1">
+    <section class="hero">
+      <img class="hero-bg" src="assets/img/hero.webp" srcset="assets/img/hero-sm.webp 960w, assets/img/hero.webp 1659w" sizes="100vw" alt="" width="1659" height="948" fetchpriority="high">
+      <div class="container hero-inner">
+        <p class="hero-wordmark" aria-hidden="true"><span>DREAM CARS</span></p>
+        <div class="hero-copy">
+          <p class="eyebrow">Movimento, status, liberdade</p>
+          <h1>Seu próximo carro com a confiança <span class="accent">que você merece</span></h1>
+          <p class="lead">Seminovos e esportivos selecionados, financiamento em até 60x e avaliação gratuita do seu usado.</p>
+          <div class="actions">
+            <a class="btn" href="catalogo.html">Escolher um carro <svg data-icon="arrowRight"></svg></a>
+            <a class="btn btn-outline" href="financiamento.html">Simular financiamento <svg data-icon="calendar"></svg></a>
+          </div>
+        </div>
+        <ul class="stats">
+          <li><p class="stat-value">2020</p><p class="stat-label">No mercado desde</p><p class="stat-text">Compra e venda com transparência</p></li>
+          <li><p class="stat-value">1 ano</p><p class="stat-label">De garantia</p><p class="stat-text">Motor protegido em todos os carros</p></li>
+          <li><p class="stat-value">60x</p><p class="stat-label">Para pagar</p><p class="stat-text">Parcelamento com ou sem entrada</p></li>
+          <li><p class="stat-value">1,5%</p><p class="stat-label">Taxa ao mês</p><p class="stat-text">Juros a partir de 1,5% em veículos novos</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section container" data-carousel aria-labelledby="destaques-titulo">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Seleção de veículos</p>
+          <h2 id="destaques-titulo" class="title">Destaques do mês</h2>
+        </div>
+        <div class="section-head-actions">
+          <a href="catalogo.html">Ver todos os carros</a>
+          <button class="icon-btn" data-prev aria-label="Anteriores"><svg data-icon="arrowLeft"></svg></button>
+          <button class="icon-btn" data-next aria-label="Próximos"><svg data-icon="arrowRight"></svg></button>
+        </div>
+      </div>
+      <div id="destaques-lista" class="carousel-track"></div>
+    </section>
+
+    <section class="section container why" aria-labelledby="porque-titulo">
+      <div>
+        <p class="eyebrow">Por que a Dream Cars</p>
+        <h2 id="porque-titulo" class="title">Mais que um carro, confiança em cada quilômetro</h2>
+        <p class="lead">Transparência em cada etapa, procedência comprovada e atendimento do primeiro contato até a entrega das chaves.</p>
+      </div>
+      <div id="porque-lista" class="why-list"></div>
+    </section>
+
+    <section class="section container" data-carousel aria-labelledby="blog-titulo">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Nosso blog</p>
+          <h2 id="blog-titulo" class="title">Mais que carros</h2>
+        </div>
+        <div class="section-head-actions">
+          <a href="blog.html">Ver todos os posts</a>
+          <button class="icon-btn" data-prev aria-label="Anteriores"><svg data-icon="arrowLeft"></svg></button>
+          <button class="icon-btn" data-next aria-label="Próximos"><svg data-icon="arrowRight"></svg></button>
+        </div>
+      </div>
+      <div id="posts-lista" class="carousel-track cols-4"></div>
+    </section>
+
+    <section class="section band" aria-labelledby="contato-titulo">
+      <div class="container contact">
+        <div>
+          <p class="eyebrow">Fale conosco</p>
+          <h2 id="contato-titulo" class="title">Encontramos o carro dos seus sonhos</h2>
+          <p class="lead">Deixe seus dados e nossa equipe entra em contato em breve.</p>
+          <ul class="perks">
+            <li><svg data-icon="consultoria"></svg>Atendimento personalizado</li>
+            <li><svg data-icon="financiamento"></svg>Melhores condições de pagamento</li>
+            <li><svg data-icon="shield"></svg>Acompanhamento do início ao fim</li>
+          </ul>
+        </div>
+        <form class="form card-form" data-whatsapp="Contato pelo site" novalidate>
+          <div class="field-row">
+            <div class="field"><label for="c-nome" class="sr-only">Nome</label><input id="c-nome" name="nome" placeholder="Seu nome" required autocomplete="name"></div>
+            <div class="field"><label for="c-tel" class="sr-only">Telefone</label><input id="c-tel" name="telefone" type="tel" placeholder="Seu telefone" required autocomplete="tel"></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label for="c-modelo" class="sr-only">Marca e modelo</label><input id="c-modelo" name="modelo" placeholder="Marca e modelo (opcional)"></div>
+            <div class="field"><label for="c-ano" class="sr-only">Ano</label><input id="c-ano" name="ano" type="number" min="1950" inputmode="numeric" placeholder="Ano (opcional)"></div>
+          </div>
+          <div class="field"><label for="c-msg" class="sr-only">Comentário</label><textarea id="c-msg" name="mensagem" rows="4" placeholder="Comentário"></textarea></div>
+          <button class="btn btn-block" type="submit">Enviar solicitação <svg data-icon="arrowRight"></svg></button>
+          <label class="check"><input type="checkbox" required> Concordo em ser contatado pelo WhatsApp.</label>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+</body>
+</html>

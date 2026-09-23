@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Financiamento | Dream Cars</title>
+  <meta name="description" content="Simule o financiamento do seu carro: até 60 meses, taxas a partir de 1,5% ao mês e seu usado como entrada. Proposta em até 24 horas.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2316181c'/><text x='16' y='22' font-family='Arial' font-weight='700' font-size='15' fill='%23ffaa00' text-anchor='middle'>DC</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/bundle/financiamento.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header id="site-header" class="site-header"></header>
+
+  <main id="conteudo" tabindex="-1">
+    <section class="section container">
+      <div class="page-head page-head-split">
+        <div>
+          <p class="eyebrow">Crédito facilitado</p>
+          <h1>Financiamento que cabe no seu bolso</h1>
+          <p class="lead">Simule em segundos, compare prazos e receba a proposta pelo WhatsApp. Trabalhamos com os principais bancos para buscar a menor taxa para você.</p>
+        </div>
+        <ul class="highlights">
+          <li><svg data-icon="calendar"></svg><span><strong>Até 60 meses</strong>Com ou sem entrada</span></li>
+          <li><svg data-icon="financiamento"></svg><span><strong>Taxas a partir de 1,5% ao mês</strong>Condições especiais em modelos selecionados</span></li>
+          <li><svg data-icon="venda"></svg><span><strong>Seu usado como entrada</strong>Avaliação gratuita na hora</span></li>
+        </ul>
+      </div>
+
+      <section class="simulator" aria-labelledby="sim-titulo">
+        <div class="sim-inputs">
+          <h2 id="sim-titulo" class="title">Simule seu financiamento</h2>
+          <div class="field">
+            <label for="sim-carro">Carro</label>
+            <select id="sim-carro"><option value="">Outro valor</option></select>
+          </div>
+          <div class="field">
+            <label for="sim-valor">Valor do carro (R$)</label>
+            <input id="sim-valor" type="number" min="5000" step="1000" inputmode="numeric" value="100000">
+          </div>
+          <div class="field">
+            <div class="field-label"><label for="sim-entrada">Entrada</label><output id="sim-entrada-out" for="sim-entrada"></output></div>
+            <input id="sim-entrada" class="range" type="range" min="0" max="90" step="5" value="20">
+          </div>
+          <fieldset class="field">
+            <legend>Prazo</legend>
+            <div id="sim-prazos" class="segmented"></div>
+          </fieldset>
+          <p class="form-note">Taxa considerada: <span id="sim-taxa"></span>. Simulação pela Tabela Price, sem IOF e tarifas.</p>
+        </div>
+
+        <div class="sim-result" aria-live="polite">
+          <p class="muted">Parcela estimada</p>
+          <p class="sim-value" id="sim-parcela"></p>
+          <div class="sim-bar" id="sim-bar" aria-hidden="true"><span class="bar-entrada"></span><span class="bar-principal"></span><span class="bar-juros"></span></div>
+          <ul class="sim-legend">
+            <li><i class="dot dot-entrada"></i>Entrada</li>
+            <li><i class="dot dot-principal"></i>Valor financiado</li>
+            <li><i class="dot dot-juros"></i>Juros</li>
+          </ul>
+          <dl class="specs" id="sim-resumo"></dl>
+          <div class="sim-compare">
+            <h3>Compare os prazos</h3>
+            <table>
+              <thead><tr><th scope="col">Prazo</th><th scope="col">Parcela</th><th scope="col">Total a prazo</th></tr></thead>
+              <tbody id="sim-tabela"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="section band" aria-labelledby="etapas-titulo">
+      <div class="container">
+        <h2 id="etapas-titulo" class="title">Do sonho à chave na mão</h2>
+        <ol class="steps">
+          <li><h3>Simule</h3><p>Escolha o carro, a entrada e o prazo que cabem no seu orçamento.</p></li>
+          <li><h3>Envie os documentos</h3><p>RG, CPF, comprovante de renda e de residência, tudo pelo WhatsApp.</p></li>
+          <li><h3>Análise de crédito</h3><p>Consultamos vários bancos e retornamos com a melhor proposta em até 24 horas.</p></li>
+          <li><h3>Retire seu carro</h3><p>Contrato assinado, carro revisado e pronto para sair da loja.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section container grid-2" aria-labelledby="proposta-titulo">
+      <form id="form-proposta" class="form card-form" data-whatsapp="Solicitação de financiamento" novalidate>
+        <h2 id="proposta-titulo">Receba sua proposta</h2>
+        <p class="muted">Enviamos a simulação acima junto com seus dados.</p>
+        <div class="field"><label for="p-nome">Nome *</label><input id="p-nome" name="nome" required autocomplete="name"></div>
+        <div class="field-row">
+          <div class="field"><label for="p-tel">Telefone *</label><input id="p-tel" name="telefone" type="tel" required autocomplete="tel" placeholder="(11) 99999-9999"></div>
+          <div class="field"><label for="p-renda">Renda mensal</label>
+            <select id="p-renda" name="renda"><option value="">Prefiro não informar</option><option>Até R$ 5 mil</option><option>De R$ 5 mil a R$ 10 mil</option><option>De R$ 10 mil a R$ 20 mil</option><option>Acima de R$ 20 mil</option></select>
+          </div>
+        </div>
+        <div class="field"><label for="p-usado">Tem carro para dar na entrada?</label>
+          <select id="p-usado" name="usado"><option value="">Selecione</option><option>Não</option><option>Sim</option></select>
+        </div>
+        <button class="btn btn-block" type="submit">Solicitar proposta <svg data-icon="arrowRight"></svg></button>
+        <label class="check"><input type="checkbox" required> Concordo em ser contatado pelo WhatsApp.</label>
+      </form>
+
+      <div>
+        <h2 class="title">Documentos necessários</h2>
+        <ul class="checklist">
+          <li><svg data-icon="check"></svg>RG e CPF, ou CNH</li>
+          <li><svg data-icon="check"></svg>Comprovante de renda dos últimos 3 meses</li>
+          <li><svg data-icon="check"></svg>Comprovante de residência recente</li>
+          <li><svg data-icon="check"></svg>Documento do usado, se for dar na entrada</li>
+        </ul>
+        <h2 class="title section-sm">Dúvidas frequentes</h2>
+        <div id="faq-lista"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "dream-cars",
+  "private": true,
+  "scripts": {
+    "build": "esbuild js/pages/*.js --bundle --format=iife --minify --target=es2020 --outdir=js/bundle",
+    "dev": "esbuild js/pages/*.js --bundle --format=iife --target=es2020 --outdir=js/bundle --watch"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  },
+  "type": "module"
+}

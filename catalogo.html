@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo | Dream Cars</title>
+  <meta name="description" content="Veículos de alta qualidade à sua espera. Filtre por marca e encontre o seu.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2316181c'/><text x='16' y='22' font-family='Arial' font-weight='700' font-size='15' fill='%23ffaa00' text-anchor='middle'>DC</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/bundle/catalogo.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header id="site-header" class="site-header"></header>
+
+  <main id="conteudo" tabindex="-1" class="section container">
+    <div class="page-head">
+      <p class="eyebrow">Seleção de veículos</p>
+      <h1>Catálogo</h1>
+      <p class="lead">Veículos revisados e com procedência, prontos para você.</p>
+    </div>
+    <div class="catalog">
+      <details id="filtros" class="filters-panel">
+        <summary>Filtros <span id="filtros-count"></span></summary>
+        <form id="filtros-form" class="filters" role="search">
+          <div class="field"><label for="f-q">Buscar</label><input id="f-q" name="q" type="search" placeholder="Modelo ou marca" autocomplete="off"></div>
+          <label class="check check-fav"><input id="f-fav" name="fav" type="checkbox"> Só meus favoritos</label>
+          <div class="field"><label for="f-marca">Marca</label><select id="f-marca" name="marca"></select></div>
+          <div class="field"><label for="f-tipo">Carroceria</label><select id="f-tipo" name="tipo"></select></div>
+          <div class="field"><label for="f-preco">Preço</label><select id="f-preco" name="preco"></select></div>
+          <div class="field"><label for="f-ano">Ano</label><select id="f-ano" name="ano"></select></div>
+          <div class="field"><label for="f-km">Quilometragem</label><select id="f-km" name="km"></select></div>
+          <div class="field"><label for="f-comb">Combustível</label><select id="f-comb" name="comb"></select></div>
+          <div class="field"><label for="f-cambio">Câmbio</label><select id="f-cambio" name="cambio"></select></div>
+          <button type="reset" class="btn btn-outline btn-sm">Limpar filtros</button>
+        </form>
+      </details>
+
+      <div>
+        <div class="catalog-bar">
+          <p id="catalogo-status" role="status"></p>
+          <div class="sort"><label for="ordem">Ordenar por</label><select id="ordem"></select></div>
+        </div>
+        <div id="catalogo-lista" class="catalog-grid"></div>
+        <nav id="paginacao" class="pagination" aria-label="Páginas do catálogo"></nav>
+      </div>
+    </div>
+  </main>
+
+  <footer id="site-footer" class="site-footer"></footer>
+</body>
+</html>

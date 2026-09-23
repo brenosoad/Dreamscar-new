@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Venda seu carro | Dream Cars</title>
+  <meta name="description" content="Venda ou troque seu carro com segurança: avaliação gratuita em 30 minutos, proposta por escrito e pagamento em até 24 horas.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%2316181c'/><text x='16' y='22' font-family='Arial' font-weight='700' font-size='15' fill='%23ffaa00' text-anchor='middle'>DC</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/bundle/vender.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header id="site-header" class="site-header"></header>
+
+  <main id="conteudo" tabindex="-1">
+    <section class="section container">
+      <div class="page-head page-head-split">
+        <div>
+          <p class="eyebrow">Venda ou troca</p>
+          <h1>Venda seu carro sem dor de cabeça</h1>
+          <p class="lead">Avaliação gratuita em 30 minutos, proposta na hora e dinheiro na conta em até 24 horas.</p>
+          <div class="actions">
+            <button type="button" class="btn" data-scroll="avaliacao">Solicitar avaliação <svg data-icon="arrowRight"></svg></button>
+          </div>
+        </div>
+        <ul class="highlights">
+          <li><svg data-icon="avaliacao"></svg><span><strong>Avaliação gratuita</strong>Sem compromisso de venda</span></li>
+          <li><svg data-icon="banknote"></svg><span><strong>Pagamento em 24h</strong>Via PIX ou TED após a assinatura</span></li>
+          <li><svg data-icon="financiamento"></svg><span><strong>Quitamos seu financiamento</strong>Cuidamos da baixa do gravame</span></li>
+        </ul>
+      </div>
+
+      <section class="section-sm" aria-labelledby="como-titulo">
+        <h2 id="como-titulo" class="title">Como funciona</h2>
+        <ol class="steps">
+          <li><h3>Envie os dados</h3><p>Preencha o formulário com modelo, ano e quilometragem. Leva menos de 2 minutos.</p></li>
+          <li><h3>Agende a avaliação</h3><p>Nosso avaliador confere o carro na loja em cerca de 30 minutos, com vistoria completa.</p></li>
+          <li><h3>Receba a proposta</h3><p>Você sai com uma proposta por escrito, baseada na Tabela Fipe e no estado do veículo.</p></li>
+          <li><h3>Receba o pagamento</h3><p>Assinou, recebeu: pagamento em até 24 horas, ou use o valor como entrada no seu próximo carro.</p></li>
+        </ol>
+      </section>
+    </section>
+
+    <section class="section band" aria-labelledby="avaliacao-titulo">
+      <div class="container grid-2">
+        <div>
+          <p class="eyebrow">Por que vender conosco</p>
+          <h2 class="title">Mais segurança do que vender por conta própria</h2>
+          <ul class="features">
+            <li><svg data-icon="shield"></svg><div><h3>Sem riscos com estranhos</h3><p>Nada de marcar encontro com desconhecidos nem receber visitas em casa.</p></div></li>
+            <li><svg data-icon="transito"></svg><div><h3>Burocracia por nossa conta</h3><p>Transferência, comunicação de venda ao Detran e baixa de financiamento.</p></div></li>
+            <li><svg data-icon="venda"></svg><div><h3>Troca com vantagem</h3><p>Usando o carro como entrada, você ganha condições especiais no estoque.</p></div></li>
+            <li><svg data-icon="headset"></svg><div><h3>Um consultor do início ao fim</h3><p>A mesma pessoa acompanha você da avaliação ao pagamento.</p></div></li>
+          </ul>
+        </div>
+
+        <form id="avaliacao" class="form card-form" data-whatsapp="Solicitação de avaliação" novalidate>
+          <h2 id="avaliacao-titulo">Solicite sua avaliação</h2>
+          <div class="field-row">
+            <div class="field"><label for="v-nome">Nome *</label><input id="v-nome" name="nome" required autocomplete="name"></div>
+            <div class="field"><label for="v-tel">Telefone *</label><input id="v-tel" name="telefone" type="tel" required autocomplete="tel" placeholder="(11) 99999-9999"></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label for="v-marca">Marca *</label><input id="v-marca" name="marca" required list="marcas" placeholder="Ex.: Volkswagen"><datalist id="marcas"></datalist></div>
+            <div class="field"><label for="v-modelo">Modelo e versão *</label><input id="v-modelo" name="modelo" required placeholder="Ex.: T-Cross Highline"></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label for="v-ano">Ano *</label><input id="v-ano" name="ano" type="number" min="1950" required inputmode="numeric" placeholder="Ex.: 2021"></div>
+            <div class="field"><label for="v-km">Quilometragem *</label><input id="v-km" name="km" type="number" min="0" step="1000" required inputmode="numeric" placeholder="Ex.: 45000"></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label for="v-objetivo">Objetivo *</label>
+              <select id="v-objetivo" name="objetivo" required><option value="">Selecione</option><option>Vender</option><option>Trocar por outro carro</option></select>
+            </div>
+            <div class="field"><label for="v-financiado">Está financiado?</label>
+              <select id="v-financiado" name="financiado"><option value="">Selecione</option><option>Não</option><option>Sim</option></select>
+            </div>
+          </div>
+          <div class="field"><label for="v-obs">Observações</label><textarea id="v-obs" name="observacoes" rows="3" placeholder="Opcionais, avarias, manutenções recentes…"></textarea></div>
+          <button class="btn btn-block" type="submit">Solicitar avaliação <svg data-icon="arrowRight"></svg></button>
+          <label class="check"><input type="checkbox" required> Concordo em ser contatado pelo WhatsApp.</label>
+        </form>
+      </div>
+    </section>
+
+    <section class="section container grid-2" aria-labelledby="docs-titulo">
+      <div>
+        <h2 id="docs-titulo" class="title">O que levar na avaliação</h2>
+        <ul class="checklist">
+          <li><svg data-icon="check"></svg>CRLV (documento do veículo) em dia</li>
+          <li><svg data-icon="check"></svg>RG e CPF do proprietário</li>
+          <li><svg data-icon="check"></svg>Manual e chave reserva</li>
+          <li><svg data-icon="check"></svg>Notas de revisões e manutenções, se tiver</li>
+          <li><svg data-icon="check"></svg>Contrato de financiamento, se o carro estiver financiado</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="title">Dúvidas frequentes</h2>
+        <div id="vender-faq"></div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer id="site-footer" class="site-footer"></footer>
+</body>
+</html>
